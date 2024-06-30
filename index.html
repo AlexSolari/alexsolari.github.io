@@ -44,7 +44,7 @@
             document.querySelector("#checkmark").style = "";
         })
         .catch(err => {
-            main.innerHTML = arguments || err//"Світло вимкнене.";
+            main.innerHTML = err//"Світло вимкнене.";
             container.style = "background-color: #EF4444;"
             document.querySelector("#cross").style = "";
         });
