@@ -9,7 +9,7 @@
 
 </body>
 <script>
-    const response = await fetch('http://check.chz.name', { method: 'HEAD', mode: 'no-cors' });
+    const response = await fetch('http://check.chz.name', { method: 'HEAD', mode: 'no-cors' }, 2000);
     document.write(JSON.stringify(response.headers));
 </script>
 
