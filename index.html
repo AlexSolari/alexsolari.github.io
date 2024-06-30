@@ -1,0 +1,16 @@
+<html>
+
+<head>
+    <title>chz's light check</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src http:" />
+</head>
+
+<body>
+
+</body>
+<script>
+    const response = await fetch('http://check.chz.name', { method: 'HEAD', mode: 'no-cors' });
+    document.write(JSON.stringify(response.headers));
+</script>
+
+</html>
