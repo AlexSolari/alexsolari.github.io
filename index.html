@@ -36,7 +36,7 @@
 <script>
     const main = document.querySelector('.target');
     const container = document.querySelector('#svg-container');
-    fetch('http://check.chz.name', { method: 'HEAD', mode: 'no-cors' }, 2000)
+    fetch('http://check.chz.name', { method: 'GET', mode: 'no-cors' }, 2000)
         .then(res => {
             main.innerHTML = "Світло включене.";
             container.style = "background-color: #10B981;"
