@@ -9,8 +9,10 @@
 
 </body>
 <script>
-    const response = await fetch('http://check.chz.name', { method: 'HEAD', mode: 'no-cors' }, 2000);
-    document.write(JSON.stringify(response.headers));
+    fetch('http://check.chz.name', { method: 'HEAD', mode: 'no-cors' }, 2000)
+        .then(res => {
+            document.write(JSON.stringify(res.headers));
+        });
 </script>
 
 </html>
