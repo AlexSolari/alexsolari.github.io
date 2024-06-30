@@ -5,6 +5,8 @@
     <meta http-equiv="Content-Security-Policy"
         content="script-src 'self' 'unsafe-eval' 'unsafe-inline' 'unsafe-hashes' http://check.chz.name" />
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
 <body>
@@ -41,7 +43,7 @@
             document.querySelector("#checkmark").style = "";
         })
         .catch(err => {
-            main.innerHTML = "Світло вимкнене.";
+            main.innerHTML = JSON.stringify(err)//"Світло вимкнене.";
             container.style = "background-color: #EF4444;"
             document.querySelector("#cross").style = "";
         });
