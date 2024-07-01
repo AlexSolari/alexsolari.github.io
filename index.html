@@ -3,10 +3,9 @@
 <head>
     <title>chz's light check</title>
     <meta http-equiv="Content-Security-Policy"
-        content="upgrade-insecure-requests; script-src 'self' 'unsafe-eval' 'unsafe-inline' 'unsafe-hashes' http://check.chz.name" />
+        content="upgrade-insecure-requests; script-src 'self' 'unsafe-eval' 'unsafe-inline' 'unsafe-hashes' *.chz.name" />
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.png" />
-    <script src="enable-threads.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
@@ -37,7 +36,7 @@
 <script>
     const main = document.querySelector('.target');
     const container = document.querySelector('#svg-container');
-    fetch('http://check.chz.name', {
+    fetch('https://corsproxy.io/?http%3A%2F%2Fcheck.chz.name%2F', {
         mode: 'cors',
         headers: {
             'Access-Control-Allow-Origin': '*'
