@@ -45,7 +45,7 @@
         main.innerHTML = "Перевіряю статус...";
     }, 500);
     const container = document.querySelector('#svg-container');
-    fetch('https://corsproxy.io/?http%3A%2F%2Fcheck.chz.name%2F')
+    fetch('https://corsproxy.io/?http%3A%2F%2Fcheck.chz.name%2F?i='+new Date().getTime())
         .then(res => {
             if (res.status != 200){
                 fail(res);
