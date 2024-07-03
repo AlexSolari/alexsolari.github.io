@@ -45,21 +45,22 @@
         main.innerHTML = "Перевіряю статус...";
     }, 500);
     const container = document.querySelector('#svg-container');
-    fetch('https://corsproxy.io/?http%3A%2F%2Fcheck.chz.name%2F?i='+new Date().getTime())
-        .then(res => {
-            if (res.status != 200){
-                fail(res);
-                return;
-            }
+    fetch('https://corsproxy.io/?http%3A%2F%2Fcheck.chz.name%2F?i=' + new Date().getTime(), {
+        signal: AbortSignal.timeout(2000),
+    }).then(res => {
+        if (res.status != 200) {
+            fail(res);
+            return;
+        }
 
-            main.innerHTML = "Світло включене.";
-            container.style = "background-color: #10B981;"
-            document.querySelector("#checkmark").style = "";
-        })
-        .catch(fail)
-        .finally(() => {
-            clearInterval(timeoutId);
-        });
+        main.innerHTML = "Світло включене.";
+        container.style = "background-color: #10B981;"
+        document.querySelector("#checkmark").style = "";
+    })
+    .catch(fail)
+    .finally(() => {
+        clearInterval(timeoutId);
+    });
 </script>
 
 </html>
